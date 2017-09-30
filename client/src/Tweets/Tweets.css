@@ -1,0 +1,18 @@
+.App-tweets-list {
+  list-style: none;
+  padding: 1%;
+  border: cadetblue;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.App-tweets-list-item {
+  padding: 1%;
+  display: flex;
+}
+
+.App-tweets-list-item:not(:last-child){
+  border-bottom: cadetblue;
+  border-style: solid;
+  border-width: 0px 0px 2px 0px;
+}

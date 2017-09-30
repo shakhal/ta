@@ -1,0 +1,48 @@
+.App {
+    width: 100%;
+    float: left;
+}
+
+.App-logo {
+  height: 100%;
+  float: left;
+}
+
+.App-header {
+  background-color: #52aaef;
+  height: 40px;
+  padding: 10px;
+  color: white;
+}
+
+.App-title {
+  margin: 0px;
+  font-size: 2em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.App-tweets {
+    margin-top: 5%;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.App-control-next {
+    width: 50%;
+    float: right;
+    padding-left: 2%;
+    cursor: pointer;
+    color: #4594D0;
+    font-size: 2em;
+}
+
+.App-control-prev {
+    float: right;
+    padding-right: 2%;
+    cursor: pointer;
+    color: #4594D0;
+    font-size: 2em;
+}
