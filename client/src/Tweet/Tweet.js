@@ -21,7 +21,6 @@ class Tweet extends Component {
             </div>
         );
     }
-
 }
 
 export default Tweet;
