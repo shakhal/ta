@@ -19,7 +19,7 @@ class App extends Component {
         var controlQuery = "";
 
         if (action && action === 'next') {
-            controlQuery = "&action=next&id="+this.state.tweets[this.state.tweets.length - 1].id_str;
+            controlQuery = "&action=before&id="+this.state.tweets[this.state.tweets.length - 1].id_str;
         }
 
         return fetch("/api?q="+ this.state.query + controlQuery)
@@ -53,16 +53,9 @@ class App extends Component {
 
     prev = () => {
         var page = this.state.page;
-
-        if (this.state.pageCache[page - 1] && this.state.pageCache[page - 1].length > 0) {
-            this.setState({tweets: this.state.pageCache[page - 1]});
-            this.updatePage(page - 1);
-            return;
-        }
-        else {
-            this.loadTweets('prev')
-            .then(this.updatePage(page - 1));
-        }
+        this.setState({tweets: this.state.pageCache[page - 1]});
+        this.updatePage(page - 1);
+        return;
     };
 
     componentDidMount() {
@@ -95,7 +88,7 @@ class App extends Component {
                     <a onClick={() => this.next()} className="App-control-next">Next{">>"}</a>
                 }
                 {   this.state.page > 0 &&
-                    <a onClick={() => this.prev()} className="App-control-prev">{"<<"}Prev</a>
+                    <a onClick={() => this.prev()} className="App-control-prev">{"<<"}Back</a>
                 }
             </div>
           </div>
