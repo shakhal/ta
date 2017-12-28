@@ -17,6 +17,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+// this servers the static client side build code
 app.use(express.static(path.join(__dirname, 'client', 'build')));
 
 app.use('/api', api);
