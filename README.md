@@ -32,11 +32,13 @@ To run in development mode:
 
 - Browse to: http://localhost:3000/  (client side project, auto updates as you edit)
 
-To run in production mode  
+To run in production mode:  
 - Run server side 
-      - $ npm start
-
+     - $ npm start
 - Browse to: http://localhost:3001/  (server side serves the built client side code statically)
 
+To built the client project:
+- $ cd client 
+- $ yarn run build
 
 
